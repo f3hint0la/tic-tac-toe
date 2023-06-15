@@ -1,0 +1,15 @@
+.square {
+  place-items: center;
+  width: 100px;
+  height: 80px;
+  font-size: 35px;
+  padding: 10px 12px;
+  margin: 10px;
+  background: transparent;
+  color: #62fffc;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-weight: bolder;
+  cursor: pointer;
+}

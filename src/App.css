@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tic-tac-toe {
+  width: fit-content;
+  margin: 40px auto;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.tic-tac-toe h1 {
+  color: #eee;
+  color: #62fffc;
+}
+
+.tic-tac-toe button {
+  padding: 10px 12px;
+  margin: 10px;
+  width: 100px;
+  background: transparent;
+  border: 2px solid #eee;
+  color: #62fffc;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.tic-tac-toe button:hover {
+  background: #eee;
+  color: #222;
+}
+
+.tic-tac-toe .gameBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px auto;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  width: fit-content;
+  position: relative;
+  border-radius: 10px;
+}
+
+.player::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 10%;
+  background: #020c04ae;
+  border-radius: 9px;
+  z-index: -1;
+  transition: 0.2s;
+}
+
+.player .square,
+.winner .square {
+  width: 70px;
+  height: 60px;
+  pointer-events: none;
+  border-color: transparent;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.player.left::after {
+  left: 0;
+}
+
+.player.right::after {
+  left: 50%;
+}
+
+.winner {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.winner .text {
+  background: #111;
+  width: 70%;
+  max-width: 400px;
+  height: 300px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.winner .text h2 {
+  font-size: 40px;
+  margin: 15px 0;
+  color: #62fffc;
+}
+
+.winner .win {
+  margin: 0 auto;
+  width: fit-content;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  top: 10%;
+}
